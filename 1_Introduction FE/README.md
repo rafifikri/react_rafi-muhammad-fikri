@@ -1,0 +1,6 @@
+# (1) Introduction FE
+1. Front end adalah pembuatan sebuah website dimana tujuanya adalah men-develop sebuah wajah dari produk yang hasil kerjanya terlihat oleh client dan penggunaan bahasa pemrograman yang dibutuhkan adalah HTML, CSS, dan JavaScript. 
+2. Yang artinya front-end developer itu adalah orang yang bertugas untuk menghubungkan sebuah situs atau aplikasi dengan pengguna. Tugas dari sebuah front-end developer itu sendiri mengubah UI/UX yang sudah siap menuju ke halaman website. Memastikan UI yang di buat supaya nyaman digunakan, memastikan semua fungsional dapat berjalan dan tidak mengganggu user, dan menghitung setiap komposisi dalam sebuah website atau aplikasi.
+3. Langkah awal untuk menjadi seorang front-end developer adalah memahami internet sebagai jalan masuknya, Hosting, memahami bahasa pemrograman HTML, CSS, JavaScript, Version Control System (Git sebagai repositorynya dan Github sebagai servicenya) yang akan mempermudah dalam melakukan dokumentasi atau bekerja secara team, memahami konsep dari Web Security, dan package manager merupakan berkas koleksi program yang di kompilasi agar siap di eksekusi oleh sistem.
+
+Latihan - Introduction FE [here](https://docs.google.com/document/d/1tH0VR-vHMADq6VMnS4v0LCcpXuWrCcAB36sjehBHjl0/edit?usp=sharing)
