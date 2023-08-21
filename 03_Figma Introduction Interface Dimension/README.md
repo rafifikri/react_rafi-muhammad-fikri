@@ -1,4 +1,4 @@
-# (3) UI/UX
+# (3) Figma Introduction Interface Dimension
 1. Prinsip Desain
 Aturan dasar yang bekerja dengan baik untuk mengkomunikasikan informasi sehingga pengguna dapat melakukan sesuatu dengannya, apakah itu membuat keputusan, mengambil tindakan, atau hanya memahami apa yang disampaikan. Jika desain produk dilakukan dengan baik maka berpotensi untuk disukai banyak konsumen dan sering digunakan oleh mereka.
 Tujuan UI adalah untuk menyampaikan produk kepada pengguna dengan cara yang tepat waktu dan seanggun mungkin.
