@@ -8,7 +8,7 @@ Kegunaan HTML :
 3. Membuat tabel dengan tag HTML table.
 4. Membuat form HTML.
 5. Membuat gambar dengan canvas.
-6. Mempublikasikan halaman website secara online
+6. Mempublikasikan halaman website secara online.
 
 ## Dokumentasi HTML
 <!DOCTYPE html> | mendefinisikan dokumen ini sebagai HTML5
