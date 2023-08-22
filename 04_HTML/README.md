@@ -11,11 +11,11 @@ Kegunaan HTML :
 6. Mempublikasikan halaman website secara online.
 
 ## Dokumentasi HTML
-<!DOCTYPE html> | mendefinisikan dokumen ini sebagai HTML5
-<html> | elemen root dari halaman HTML
-<head> | berisi informasi meta tentang dokumen
-<title> | menentukan judul untuk dokumen
-<body> | berisi konten halaman yang terlihat
+|<!DOCTYPE html> | mendefinisikan dokumen ini sebagai HTML5|
+|<html> | elemen root dari halaman HTML|
+|<head> | berisi informasi meta tentang dokumen|
+|<title> | menentukan judul untuk dokumen|
+|<body> | berisi konten halaman yang terlihat|
 
 ## Styling
 <strong>membuat text lebih tebal</strong>
