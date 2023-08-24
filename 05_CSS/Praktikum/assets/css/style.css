@@ -149,6 +149,10 @@ body {
   margin-left: auto; /* Menggeser elemen ke paling kanan */
 }
 
+.color {
+  color: #37517e;
+}
+
 
 .hero-main-container {
   display: flex;
