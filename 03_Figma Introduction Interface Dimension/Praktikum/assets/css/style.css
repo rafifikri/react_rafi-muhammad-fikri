@@ -1,0 +1,179 @@
+body {
+  font-family: "Jost", sans-serif;
+}
+
+.header {
+  background-color: gray;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important;
+}
+
+.navbar-text{
+  color: #0d6efd !important;
+}
+
+.hero-container {
+  background-color: #37517e;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-items: center;
+  padding: 3rem;
+}
+
+.hero-img {
+  display: none;
+  height: 300px;
+  width: 400px;
+}
+
+.hero-header {
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.hero-paragraph {
+  color: #ffffff99;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.inputSideButton {
+  border: 1px solid #FFFFFF;
+  border-radius: 100px;
+  padding: 10px 100px;
+  width: 300px;
+}
+
+.inputSideButton-main{
+  position: relative;
+  width: max-content;
+}
+
+
+.hero-button {
+  background-color: #47b2e4;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 100px;
+  border: 0;
+  overflow: hidden;
+  margin-right: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover,
+.subscribe-button:hover {
+  background-color: #0D6EFD;
+  color: white;
+}
+
+.subscribe-button {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  border: 1px solid #47b2e4;
+  border-radius: 100px ;
+  background-color: #47b2e4;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hero-body {
+  text-align: center;
+  background-color: #F3F5FA;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.footer-1-container {
+  display: grid;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.footer-1-sub {
+  background-color: #37517e;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Menyebarkan elemen secara merata di dalam flex container*/
+  align-items: center; /* Mengatur elemen vertikal di tengah container*/
+  padding: 10px 20px; /* Memberikan jarak ke samping */
+}
+
+.footer-1-sub p:last-child {
+  margin-left: auto; /* Menggeser elemen ke paling kanan */
+}
+
+.color {
+  color: #37517e;
+}
+
+
+.hero-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* min-height: 80vh; */
+}
+
+.input-button-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 230px; /* Lebar total kotak input dan tombol */
+}
+
+.circle-frame {
+  background-color: #47b2e4;
+  width: 30px;
+  height: 30px;
+  border: 2px;
+  border-radius: 100%; 
+  box-sizing: border-box; 
+}
+
+@media screen and (min-width: 885px) {
+  .footer-1-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-img {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .footer-1-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
