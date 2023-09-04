@@ -1,15 +1,17 @@
-document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded", function () {
   const userTable = document.getElementById("productList");
   const tbody = userTable.querySelector("tbody");
   const productNameInput = document.getElementById("validationDefault01");
-  const productPriceInput = document.getElementById('validationDefault08');
-  const productCategoryInput = document.getElementById('validationDefault02');
-  const productImageInput = document.getElementById('validationDefault03');
-  const productFreshnessInput = document.getElementById('validationDefault04');
-  const productDescriptionInput = document.getElementById('validationDefault07');
-  const deleteButton = document.getElementById('dlt');
-  const searchButton = document.getElementById('src');
-  const searchProductNameInput = document.getElementById('textSearch');
+  const productPriceInput = document.getElementById("validationDefault08");
+  const productCategoryInput = document.getElementById("validationDefault02");
+  const productImageInput = document.getElementById("validationDefault03");
+  const productFreshnessInput = document.getElementById("validationDefault04");
+  const productDescriptionInput = document.getElementById(
+    "validationDefault07"
+  );
+  const deleteButton = document.getElementById("dlt");
+  const searchButton = document.getElementById("src");
+  const searchProductNameInput = document.getElementById("textSearch");
   let userData = [];
 
   function addUserToTable(data) {
@@ -38,9 +40,13 @@ document.addEventListener("DOMContentLoaded", function (){
 
   function searchUser() {
     const productNameToSearch = searchProductNameInput.value;
-    const user = userData.find((data) => data.validationDefault01 === productNameToSearch);
+    const user = userData.find(
+      (data) => data.validationDefault01 === productNameToSearch
+    );
     if (user) {
-      alert(`Data found!\nProduct Name: ${user.validationDefault01}\nProduct category: ${user.validationDefault02}\nProduct Image: ${user.validationDefault03}\nProduct Freshness: ${user.validationDefault04}\nAdditional Description: ${user.validationDefault07}\nProduct Price: ${user.validationDefault08}`);
+      alert(
+        `Data found!\nProduct Name: ${user.validationDefault01}\nProduct category: ${user.validationDefault02}\nProduct Image: ${user.validationDefault03}\nProduct Freshness: ${user.validationDefault04}\nAdditional Description: ${user.validationDefault07}\nProduct Price: ${user.validationDefault08}`
+      );
     } else {
       alert("Data not found!");
     }
