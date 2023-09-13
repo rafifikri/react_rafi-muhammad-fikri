@@ -5,7 +5,7 @@ export default function Table(props) {
 
   return (
     <div className="shadow overflow-hidden rounded border-b border-gray-200">
-      <table className="w-full table-auto">
+      <table className="w-full table-auto border-collapse border border-gray-300">
         <thead className="bg-white-800 text-black">
           <tr>
             {headers.map((header, index) => (
@@ -14,13 +14,13 @@ export default function Table(props) {
           </tr>
           {datas.map((data) => (
             <tr key={data.id}>
-              <th className="font-normal">{data.id}</th>
-              <th className="font-normal">{data.productName}</th>
-              <th className="font-normal">{data.productCategory}</th>
-              <th className="font-normal">{data.productImage}</th>
-              <th className="font-normal">{data.productFreshness}</th>
-              <th className="font-normal">{data.productDescription}</th>
-              <th className="font-normal">{data.productPrice}</th>
+              <td>{data.id}</td>
+              <td>{data.productName}</td>
+              <td>{data.productCategory}</td>
+              <td>{data.productImage}</td>
+              <td>{data.productFreshness}</td>
+              <td>{data.productDescription}</td>
+              <td>{data.productPrice}</td>
             </tr>
           ))}
         </thead>

@@ -8,7 +8,7 @@ function Input(props) {
     <div className="container">
       <div className="flex items-center justify-center">
         <div className="flex flex-col">
-          <label className="ml-1">{label}</label>
+          <label className="ml-1 sm:mt-2">{label}</label>
           <input
             className={className}
             value={value}
@@ -34,10 +34,10 @@ function Select(props) {
   } = props;
 
   return (
-    <div className="container">
-      <div className="flex items-center justify-center">
+    <div className="container mx-auto">
+      <div className="flex items-center justify-center sm:flex-col">
         <div className="flex flex-col">
-          <label>{label}</label>
+          <label className="sm:mt-2">{label}</label>
           <select className={className} onChange={onChange} value={value}>
             <option disabled>{placeholder}</option>
             {options.map((option) => (
@@ -54,13 +54,14 @@ function TextArea(props) {
   const { label, onChange, defaultValue, value, type = [] } = props;
 
   return (
-    <div className="container">
-      <div className="flex items-center justify-center ">
-        <label className="mr-[145px]">{label}</label>
+    <div className="container mx-auto">
+      <div className="flex items-center justify-center sm:flex-col">
+        <label className="mr-[145px] sm:mt-2">{label}</label>
       </div>
       <div className="flex items-center justify-center">
-        <div className="flex flex-col border border-gray-300 rounded-lg w-[300px] h-[100px]">
+        <div className="flex flex-col border border-gray-300 rounded-lg w-full sm:w-[300px]">
           <textarea
+            className="w-full h-[100px] p-2"
             onChange={onChange}
             value={value}
             defaultValue={defaultValue}

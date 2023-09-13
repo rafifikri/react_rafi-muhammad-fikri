@@ -15,6 +15,42 @@ function CreateProduct1() {
   const [productPrice, setProductPrice] = useState(0);
   const [products, setProducts] = useState([]);
 
+  //fungsi search
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  // handle search
+  function handleSearch() {
+    const filteredResults = products.filter((product) =>
+      product.productName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSearchResults(filteredResults);
+  }
+
+  // fungsi hapus
+
+  function handleDelete() {
+    if (searchResults.length > 0) {
+      const updatedSearchResults = [...searchResults];
+      updatedSearchResults.pop();
+      setSearchResults(updatedSearchResults);
+    } else if (products.length > 0) {
+      const updatedProducts = [...products];
+      updatedProducts.pop();
+      setProducts(updatedProducts);
+    }
+  }
+
+  //fungsi reset form
+  function resetForm() {
+    setProductName("");
+    setProductCategory("");
+    setProductDescription("");
+    setProductImage("");
+    setProductFreshness("");
+    setProductPrice(0);
+  }
+
   // TODO: Fungsi ini beri validasi ketika semua input belum terisi maka data tidak di push ke tabel
   function handleSubmit(event) {
     event.preventDefault();
@@ -31,6 +67,7 @@ function CreateProduct1() {
       const dupeProducts = [...products, product];
       setProducts(dupeProducts);
       // TODO: Data yang telah di input, silahkan di reset seperti semula
+      resetForm();
     } else {
       alert("Input belum terisi semua");
     }
@@ -38,8 +75,8 @@ function CreateProduct1() {
 
   return (
     <Layout>
-      <div className="container py-8">
-        <div className="flex items-center justify-center">
+      <div className="container py-8 mx-auto">
+        <div className="flex items-center justify-center sm:flex-col">
           <img
             className="w-10 h-15"
             src="src/assets/bootstrap-logo.svg"
@@ -57,30 +94,32 @@ function CreateProduct1() {
           </p>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
+
+      <form onSubmit={handleSubmit} className="mx-auto">
+        <h5 className="font-bold ml-[25px]">Detail Product</h5>
         <Input
-          className="border-2 rounded-md w-[300px] h-[35px]"
+          className="border-2 rounded-md w-full sm:w-[300px] h-[35px]"
           label="Product Name"
           type="text"
           defaultValue={productName}
           onChange={(event) => setProductName(event.target.value)}
         />
         <Select
-          className="border-2 rounded-md w-[300px] h-[35px]"
+          className="border-2 rounded-md w-full sm:w-[300px] h-[35px]"
           label="Product Category"
           placeholder="Choose..."
           options={["Keyboard", "Mouse", "Monitor"]}
           onChange={(event) => setProductCategory(event.target.value)}
         />
         <Input
-          className="border-2 rounded-md"
+          className="border-2 rounded-md w-full"
           label="Image Of Product"
           type="file"
           defaultValue={productImage}
           onChange={(event) => setProductImage(event.target.value)}
         />
         <Select
-          className="border-2 rounded-md w-[300px] h-[35px]"
+          className="border-2 rounded-md w-full sm:w-[300px] h-[35px]"
           label="Product Freshness"
           placeholder="Choose..."
           options={["Brand New", "Second Hand", "Refubished"]}
@@ -93,7 +132,7 @@ function CreateProduct1() {
           onChange={(event) => setProductDescription(event.target.value)}
         />
         <Input
-          className="border-2 rounded-md w-[300px] h-[35px]"
+          className="border-2 rounded-md w-full sm:w-[300px] h-[35px]"
           label="Product Price"
           type="number"
           defaultValue={productPrice}
@@ -101,18 +140,65 @@ function CreateProduct1() {
         />
         <Button label="Submit" type="submit" />
       </form>
-      <Table
-        headers={[
-          "No",
-          "Product Name",
-          "Product Category",
-          "Image Of Product",
-          "Product Freshness",
-          "Additional Description",
-          "Product Price",
-        ]}
-        datas={products}
-      />
+
+      <div className="container lg:ml-[150px] sm:ml-[50px]">
+        <div className="overflow-x-auto">
+          <h1 className="font-bold text-center pt-5">List Product</h1>
+          {searchResults.length > 0 ? (
+            <Table
+              headers={[
+                "No",
+                "Product Name",
+                "Product Category",
+                "Image Of Product",
+                "Product Freshness",
+                "Additional Description",
+                "Product Price",
+              ]}
+              datas={searchResults}
+              handleDelete={handleDelete}
+            />
+          ) : (
+            <Table
+              headers={[
+                "No",
+                "Product Name",
+                "Product Category",
+                "Image Of Product",
+                "Product Freshness",
+                "Additional Description",
+                "Product Price",
+              ]}
+              datas={products}
+              handleDelete={handleDelete}
+            />
+          )}
+        </div>
+
+        <div className="mt-[15px]">
+          <input
+            className="border-2 rounded-md w-full sm:w-[300px] h-[35px] mb-3"
+            type="text"
+            placeholder="Search By Product Name"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+          />
+        </div>
+        <div>
+          <button
+            className="p-1 bg-[#0d6efd] rounded px-3 py-2 text-white"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
+          <button
+            className="p-1 bg-[#db1514] rounded px-3 py-2 text-white"
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     </Layout>
   );
 }
