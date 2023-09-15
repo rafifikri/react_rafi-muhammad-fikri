@@ -128,14 +128,14 @@ function CreateProduct1() {
   }
 
   //fungsi reset form
-  // function resetForm() {
-  //   setProductName("");
-  //   setProductCategory("");
-  //   setProductDescription("");
-  //   setProductImage("");
-  //   setProductFreshness("");
-  //   setProductPrice(0);
-  // }
+  function resetForm() {
+    setProductName("");
+    setProductCategory("");
+    setProductDescription("");
+    setProductImage("");
+    setProductFreshness("");
+    setProductPrice(0);
+  }
 
   // Fungsi untuk menghasilkan nomor acak dan menampilkannya di konsol
   function handleRandomNumber() {
@@ -169,7 +169,7 @@ function CreateProduct1() {
       const dupeProducts = [...products, product];
       setProducts(dupeProducts);
       // TODO: Data yang telah di input, silahkan di reset seperti semula
-      // resetForm();
+      resetForm();
     } else {
       alert("Input belum terisi semua");
     }
