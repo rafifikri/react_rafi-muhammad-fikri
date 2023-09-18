@@ -14,7 +14,7 @@ body {
   color: white !important;
 }
 
-.navbar-text{
+.navbar-text {
   color: #0d6efd !important;
 }
 
@@ -47,17 +47,16 @@ body {
 }
 
 .inputSideButton {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 100px;
   padding: 10px 100px;
   width: 300px;
 }
 
-.inputSideButton-main{
+.inputSideButton-main {
   position: relative;
   width: max-content;
 }
-
 
 .hero-button {
   background-color: #47b2e4;
@@ -73,7 +72,7 @@ body {
 
 .hero-button:hover,
 .subscribe-button:hover {
-  background-color: #0D6EFD;
+  background-color: #0d6efd;
   color: white;
 }
 
@@ -82,12 +81,12 @@ body {
   top: 0;
   right: -1px;
   border: 1px solid #47b2e4;
-  border-radius: 100px ;
+  border-radius: 100px;
   background-color: #47b2e4;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .center-button {
@@ -100,7 +99,7 @@ body {
 
 .hero-body {
   text-align: center;
-  background-color: #F3F5FA;
+  background-color: #f3f5fa;
   padding-top: 20px;
   padding-bottom: 50px;
 }
@@ -130,7 +129,6 @@ body {
   color: #37517e;
 }
 
-
 .hero-main-container {
   display: flex;
   flex-direction: column;
@@ -150,8 +148,8 @@ body {
   width: 30px;
   height: 30px;
   border: 2px;
-  border-radius: 100%; 
-  box-sizing: border-box; 
+  border-radius: 100%;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 885px) {
@@ -172,7 +170,7 @@ body {
   .hero-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
+
   .footer-1-container {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
