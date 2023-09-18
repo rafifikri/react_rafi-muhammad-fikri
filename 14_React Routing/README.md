@@ -1,6 +1,6 @@
 # (14) React Routing
 
-## Apa itu Reuter?
+## Apa itu Router?
 
 Routs merupakan modul Dalam react yang berfungsi untuk melakukan proses navigasi pada SPA(Single page application)
 
