@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 
 export default function Detail() {
   const { id } = useParams();

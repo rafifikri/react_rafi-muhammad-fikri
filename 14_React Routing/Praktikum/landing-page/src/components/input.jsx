@@ -19,7 +19,7 @@ function Input(props) {
         <div className="flex flex-col">
           <label className="ml-1 sm:mt-2">{label}</label>
           <input
-            className="border-2 rounded-md w-full sm:w-[300px] h-[35px] file:border-[#0d6efd] file:hover:cursor-pointer hover:cursor-pointer"
+            className="border-2 rounded-md w-full sm:w-[300px] h-[35px] file:border-[#0d6efd] file:hover:cursor-pointer"
             value={value}
             defaultValue={defaultValue}
             onChange={onChange}
@@ -92,7 +92,7 @@ function TextArea(props) {
       <div className="flex items-center justify-center">
         <div className="flex flex-col border border-gray-300 rounded-lg w-full sm:w-[300px]">
           <textarea
-            className="w-full h-[100px] p-2 hover:cursor-pointer"
+            className="w-full h-[100px] p-2"
             onChange={onChange}
             value={value}
             type={type}

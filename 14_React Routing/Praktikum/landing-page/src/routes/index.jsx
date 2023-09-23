@@ -5,9 +5,9 @@ import {
 } from "react-router-dom";
 
 import LandingPage from "../pages/landingPage";
-import CreateProduct from "../pages/createProduct";
-import DetailCreateProduct from "../pages/detail";
-import Login from "../components/login";
+import CreateProduct from "../pages/products/createProduct";
+import DetailCreateProduct from "../pages/products/detail";
+import Login from "../pages/login";
 import { useToken } from "../utils/token-context";
 
 export default function Router() {

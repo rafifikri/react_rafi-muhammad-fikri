@@ -1,13 +1,13 @@
 import React, { Component, useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from "uuid";
-import "../styles/createProduct.css";
+import "../../styles/createProduct.css";
 
-import Layout from "../components/layout";
-import { Input, Select, TextArea } from "../components/input";
-import Button from "../components/button";
-import Table from "../components/table";
-import article from "../components/article";
+import Layout from "../../components/layout";
+import { Input, Select, TextArea } from "../../components/input";
+import Button from "../../components/button";
+import Table from "../../components/table";
+import article from "../../components/article";
 
 function CreateProduct1() {
   const [productName, setProductName] = useState("");
@@ -146,16 +146,6 @@ function CreateProduct1() {
     }
   }
 
-  //fungsi reset form
-  function resetForm() {
-    setProductName("");
-    setProductCategory("");
-    setProductDescription("");
-    setProductImage("");
-    setProductFreshness("");
-    setProductPrice(0);
-  }
-
   // Fungsi untuk menghasilkan nomor acak dan menampilkannya di konsol
   function handleRandomNumber() {
     const randomNumber = Math.floor(Math.random() * 1000);
@@ -237,8 +227,6 @@ function CreateProduct1() {
           text: "Product has been successfully added!",
         });
       }
-
-      // resetForm();
     }
   }
 
