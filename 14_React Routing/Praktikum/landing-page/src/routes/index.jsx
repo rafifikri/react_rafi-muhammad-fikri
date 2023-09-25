@@ -32,14 +32,6 @@ export default function Router() {
       element: token ? <DetailCreateProduct /> : <Navigate to="/login" />,
     },
     {
-      path: "/createProduct",
-      element: <CreateProduct />,
-    },
-    {
-      path: "/createProduct/:id",
-      element: <DetailCreateProduct />,
-    },
-    {
       path: "*",
       element: <div>404 page not found</div>,
     },
