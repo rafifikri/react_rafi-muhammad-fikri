@@ -1,0 +1,11 @@
+.color {
+  color: #37517e;
+}
+
+.circle-frame {
+  background-color: #47b2e4;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
