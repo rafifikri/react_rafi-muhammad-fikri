@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 
-import { render, screen, within, fireEvent } from "../../utils";
+import { Render, screen, within, fireEvent } from "../../utils";
 
 import App from "../../../pages/products/createProduct";
 
@@ -16,7 +16,7 @@ const productInput = [
 
 describe("Index Product Page", () => {
   beforeEach(() => {
-    render(<App />);
+    Render(<App />);
   });
 
   describe("Renders the page", () => {
@@ -29,7 +29,7 @@ describe("Index Product Page", () => {
 
     it("should render the table component", () => {
       // TODO: create test for table component
-      const { container } = render(<App />);
+      const { container } = Render(<App />);
       const table = container.querySelector("table");
       expect(table).toBeInTheDocument();
     });
