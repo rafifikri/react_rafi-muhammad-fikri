@@ -2,7 +2,11 @@
 
 # RESTful API
 
-RESTful API (Application Programming Interface) adalah pendekatan yang populer dalam pengembangan perangkat lunak untuk menghubungkan berbagai komponen perangkat lunak dan memungkinkan pertukaran data antara mereka. MockAPI adalah alat yang berguna untuk membuat dan menguji API palsu atau simulasi yang dapat digunakan dalam pengembangan perangkat lunak. Dalam resume ini, kami akan membahas bagaimana menggunakan MockAPI untuk membuat endpoint dengan metode POST, PUT, dan DELETE dalam konteks pengembangan RESTful API.
+RESTful API (Application Programming Interface) adalah pendekatan yang populer dalam pengembangan perangkat lunak untuk menghubungkan berbagai komponen perangkat lunak dan memungkinkan pertukaran data antara mereka.
+
+## MockAPI
+
+MockAPI adalah alat yang berguna untuk membuat dan menguji API palsu atau simulasi yang dapat digunakan dalam pengembangan perangkat lunak.
 
 1. Metode POST:
    Metode POST digunakan untuk menambahkan data baru ke dalam API.
@@ -40,6 +44,3 @@ Manfaat Penggunaan MockAPI :
 - Memberikan kontrol penuh dalam simulasi berbagai respons dan kondisi API.
 - Mengurangi ketergantungan pada backend aktual selama pengembangan frontend.
 - Mempercepat siklus pengembangan dengan memungkinkan pengujian cepat dan iteratif.
-
-**Kesimpulan:**
-Menggunakan MockAPI untuk membuat endpoint dengan metode POST, PUT, dan DELETE adalah praktik yang berguna dalam pengembangan RESTful API. Ini memungkinkan pengembang untuk menguji fungsionalitas API tanpa harus bergantung pada backend yang sebenarnya dan mempercepat pengembangan aplikasi secara keseluruhan. Dengan mengikuti langkah-langkah yang tepat, pengembang dapat dengan mudah mengintegrasikan dan menguji operasi-operasi penting ini dalam API mereka.
