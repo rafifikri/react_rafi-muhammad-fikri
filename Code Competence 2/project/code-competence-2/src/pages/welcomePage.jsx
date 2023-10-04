@@ -74,97 +74,103 @@ function WelcomePage() {
         </div>
       </div>
 
-      <h1 className="text-3xl font-semibold text-center my-5">About Us</h1>
-      <div className="grid grid-cols-2 mx-8">
-        <div className="text-justify">
-          <p className="mb-4 pr-9 ">
-            Welcome to our website! We are a community that has grown out of a
-            deep love for the wonders of nature, especially trees and forests.
-            From the very beginning, we have been committed to preserving and
-            promoting the beauty and importance of forest ecosystems worldwide.
-            Through this website, we aim to share our joy and admiration for
-            nature, as well as inspire people from various backgrounds to get
-            involved in environmental conservation.
-          </p>
-          <p className=" pr-9">
-            We believe that we all have a role in preserving the universe.
-            Therefore, we invite you to join us on this journey. Together, we
-            can celebrate biodiversity, take action to protect precious forests,
-            and keep our planet green for future generations. Thank you for your
-            support in our mission to preserve the beauty of trees and forests,
-            which form the foundation of life on this planet. Let's together
-            care for and nurture them with love and care.
-          </p>
-        </div>
-        <div className="">
-          <img
-            src="src/assets/water-fall.jpg"
-            alt="About Us"
-            className="w-full"
-          />
-        </div>
-      </div>
-
-      <div className="flex justify-center py-8">
+      <div className="container mx-auto px-4 py-5">
+        <h1 className="text-3xl font-semibold text-center my-5">About Us</h1>
         <div className="grid grid-cols-2 mx-8">
           <div className="text-justify">
             <p className="mb-4 pr-9 ">
-              <h2 className="text-2xl font-semibold my-5">Contact us</h2>
-              Need to get in touch with us? Either fill out the form with your
-              inquiry or find the department email you'd like to contact below.
+              Welcome to our website! We are a community that has grown out of a
+              deep love for the wonders of nature, especially trees and forests.
+              From the very beginning, we have been committed to preserving and
+              promoting the beauty and importance of forest ecosystems
+              worldwide. Through this website, we aim to share our joy and
+              admiration for nature, as well as inspire people from various
+              backgrounds to get involved in environmental conservation.
+            </p>
+            <p className=" pr-9">
+              We believe that we all have a role in preserving the universe.
+              Therefore, we invite you to join us on this journey. Together, we
+              can celebrate biodiversity, take action to protect precious
+              forests, and keep our planet green for future generations. Thank
+              you for your support in our mission to preserve the beauty of
+              trees and forests, which form the foundation of life on this
+              planet. Let's together care for and nurture them with love and
+              care.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-5 my-5">
-            <form className="relative" onSubmit={handleSubmit}>
-              <div className="mb-2 grid-cols-2">
-                <Input
-                  label="First Name"
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+          <div className="">
+            <img
+              src="src/assets/water-fall.jpg"
+              alt="About Us"
+              className="w-full"
+            />
+          </div>
+        </div>
+      </div>
 
+      <div className="container mx-auto px-4 py-5">
+        <div className="flex justify-center py-8">
+          <div className="grid grid-cols-2 mx-8">
+            <div className="text-justify">
+              <p className="mb-4 pr-9 ">
+                <h2 className="text-2xl font-semibold my-5">Contact us</h2>
+                Need to get in touch with us? Either fill out the form with your
+                inquiry or find the department email you'd like to contact
+                below.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-5 my-5">
+              <form className="relative" onSubmit={handleSubmit}>
+                <div className="mb-2 grid-cols-2">
+                  <Input
+                    label="First Name"
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="mb-2">
+                  <Input
+                    label="Email"
+                    type="email"
+                    name="email"
+                    placeholder="you@email.example"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-2">
+                  <TextArea
+                    label="What can we help you with?"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></TextArea>
+                </div>
+                <div className="py-2">
+                  <button
+                    className="bg-[#198754] hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
               <div className="mb-2">
                 <Input
-                  label="Email"
-                  type="email"
-                  name="email"
-                  placeholder="you@email.example"
-                  value={formData.email}
+                  label="Last Name"
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
                   onChange={handleChange}
                   required
                 />
               </div>
-              <div className="mb-2">
-                <TextArea
-                  label="What can we help you with?"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></TextArea>
-              </div>
-              <div className="py-2">
-                <button
-                  className="bg-[#198754] hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-            <div className="mb-2">
-              <Input
-                label="Last Name"
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-              />
             </div>
           </div>
         </div>
