@@ -3,15 +3,3 @@ input[type="file"]::file-selector-button {
   color: white;
   transition: background-color 0.3s ease;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid #dfe0e1;
-  padding: 8px;
-  text-align: left;
-}
