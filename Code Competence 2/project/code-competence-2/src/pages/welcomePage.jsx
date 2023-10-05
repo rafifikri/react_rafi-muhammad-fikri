@@ -119,49 +119,16 @@ function WelcomePage() {
                 below.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-5 my-5">
-              <form className="relative" onSubmit={handleSubmit}>
-                <div className="mb-2 grid-cols-2">
-                  <Input
-                    label="First Name"
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="mb-2">
-                  <Input
-                    label="Email"
-                    type="email"
-                    name="email"
-                    placeholder="you@email.example"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="mb-2">
-                  <TextArea
-                    label="What can we help you with?"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></TextArea>
-                </div>
-                <div className="py-2">
-                  <button
-                    className="bg-[#198754] hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-              <div className="mb-2">
+            <form className="relative" onSubmit={handleSubmit}>
+              <div className="mb-2 grid-cols-2 flex gap-5">
+                <Input
+                  label="First Name"
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
                 <Input
                   label="Last Name"
                   type="text"
@@ -171,7 +138,36 @@ function WelcomePage() {
                   required
                 />
               </div>
-            </div>
+
+              <div className="mb-2">
+                <Input
+                  label="Email"
+                  type="email"
+                  name="email"
+                  placeholder="you@email.example"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="mb-2">
+                <TextArea
+                  label="What can we help you with?"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></TextArea>
+              </div>
+              <div className="py-2">
+                <button
+                  className="bg-[#198754] hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
