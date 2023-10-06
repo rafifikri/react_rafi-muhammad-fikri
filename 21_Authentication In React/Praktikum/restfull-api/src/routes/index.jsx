@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
@@ -14,7 +18,7 @@ export default function Router() {
     setAxiosConfig("", "https://651a7c39340309952f0d5e9d.mockapi.io/api/v1");
   }, []);
   // TODO: change this when authentication learned
-  const { token } = useSelector((state) => state.data);
+  const { token } = useToken();
 
   const router = createBrowserRouter([
     {
@@ -23,15 +27,16 @@ export default function Router() {
     },
     {
       path: "/login",
-      element: <Login />,
+      element: token === "" ? <Login /> : <Navigate to="/" />,
     },
     {
       path: "/createProduct",
-      element: <CreateProduct />,
+      element: token === "" ? <Navigate to="/login" /> : <CreateProduct />,
     },
     {
       path: "/createProduct/:id",
-      element: <DetailCreateProduct />,
+      element:
+        token === "" ? <Navigate to="/login" /> : <DetailCreateProduct />,
     },
     {
       path: "*",

@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import React from "react";
 import * as z from "zod";
@@ -9,18 +8,18 @@ import Layout from "../components/layout";
 import { Input } from "../components/input";
 import Button from "../components/button";
 import { useToken } from "../utils/states/contexts/token-context";
-import { handleAuth } from "../utils/states/redux/reducers/reducer";
+import Swal from "../utils/swal";
+import { login } from "../utils/api/auth/api";
 
 const schema = z.object({
-  email: z.string().email().min(1, { message: "Email is required" }),
+  username: z.string().min(1, { message: "Username is required" }),
   password: z.string().min(1, { message: "Password is required" }),
 });
 
 export default function Login() {
-  //const { token, setToken } = useToken();
+  const { changeToken } = useToken();
 
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const {
     register,
@@ -30,26 +29,30 @@ export default function Login() {
     resolver: zodResolver(schema),
   });
 
-  function handleLogin(data) {
-    localStorage.setItem("email", data.email);
-    localStorage.setItem("password", data.password);
-
-    //setToken(JSON.stringify(data));
-    dispatch(handleAuth({ token: JSON.stringify(data), isLoggedIn: true }));
-    navigate("/createProduct");
+  async function handleLogin(data) {
+    try {
+      const result = await login(data);
+      changeToken(JSON.stringify(result));
+      navigate("/");
+    } catch (error) {
+      Swal.fire({
+        title: "Error",
+        text: error.message,
+        showCancelButton: false,
+      });
+    }
   }
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="h-screen flex flex-col items-center">
         <p className="mb-4 text-center">Login</p>
         <form onSubmit={handleSubmit(handleLogin)} className="w-full max-w-md">
           <Input
             register={register}
-            name="email"
-            label="Email"
-            type="email"
-            error={errors.email?.message}
+            name="username"
+            label="Username"
+            error={errors.username?.message}
           />
           <Input
             register={register}
