@@ -8,11 +8,11 @@
 ## Struktur A.I.
 
 1. Artificial Intelligence
-   Kemampuan mesin untuk meniru perilaku manusia yang cerdas
+   - Kemampuan mesin untuk meniru perilaku manusia yang cerdas
 2. Machine Learning.
-   Penerapan AI yang memungkinkan sistem belajar dan meningkatkan secara otomatis dari pengalaman.
+   - Penerapan AI yang memungkinkan sistem belajar dan meningkatkan secara otomatis dari pengalaman.
 3. Deep Learning
-   Penerapan pembelajaran mesin yang menggunakan algoritme kompleks dan jaringan saraf dalam untuk melatih model.
+   - Penerapan pembelajaran mesin yang menggunakan algoritme kompleks dan jaringan saraf dalam untuk melatih model.
 
 ## Teknologi penggerak A.I.
 
