@@ -1,0 +1,31 @@
+USER:
+Product description: A home milkshake maker
+Seed words: fast, healthy, compact.
+
+ASSISTANT:
+1. QuickBlend
+2. NutriShake
+3. MiniMixer
+4. SpeedyShake
+5. FitBlend
+6. CompactMix
+7. HealthyBlend
+8. PowerShake
+9. SlimBlend
+10. VitaMixer
+
+USER:
+Product description: A modern bike
+Seed words: fast, small, compact, elegant, expensive
+
+ASSISTANT:
+1. SwiftCycle
+2. MiniSpeedster
+3. CompactVelo
+4. ChicRider
+5. LuxeBike
+6. FastTrack
+7. SleekCruiser
+8. ElegantRacer
+9. CompactElite
+10. ExpensiveVelocity
