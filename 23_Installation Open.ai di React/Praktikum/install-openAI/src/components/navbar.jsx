@@ -47,6 +47,11 @@ export default function Navbar() {
                 Product
               </button>
             </Link>
+            <Link to="/openai">
+              <button className="text-[#0d6efd]  hover:bg-[#0d6efd] hover:text-white rounded px-2 py-1 font-bold">
+                OpenAI
+              </button>
+            </Link>
             <button
               className="text-[#0d6efd]  hover:bg-[#0d6efd] hover:text-white rounded px-2 py-1 font-bold"
               onClick={() => handleLogout()}

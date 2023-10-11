@@ -3,13 +3,13 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 import LandingPage from "../pages/landingPage";
 import CreateProduct from "../pages/products/createProduct";
 import DetailCreateProduct from "../pages/products/detail";
 import Login from "../pages/login";
+import AIPage from "../pages/openai/index";
 import { setAxiosConfig } from "../utils/api/axiosWithConfig";
 import { useToken } from "../utils/states/contexts/token-context";
 
@@ -37,6 +37,10 @@ export default function Router() {
       path: "/createProduct/:id",
       element:
         token === "" ? <Navigate to="/login" /> : <DetailCreateProduct />,
+    },
+    {
+      path: "/openai",
+      element: <AIPage />,
     },
     {
       path: "*",
