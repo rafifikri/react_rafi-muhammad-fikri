@@ -12,6 +12,9 @@ import "../styles/welcomePage.css";
 
 import Layout from "../components/Layout";
 import { Input, TextArea } from "../components/input";
+import greenField from "../assets/green-field.jpg";
+import GreenLeaf from "../assets/logo.jpg";
+import waterFall from "../assets/water-fall.jpg";
 
 function WelcomePage() {
   const [formData, setFormData] = useState({
@@ -56,11 +59,7 @@ function WelcomePage() {
     <Layout>
       <div className="welcome-container">
         <div className="welcome-bg">
-          <img
-            src="src/assets/green-field.jpg"
-            alt="Welcome Image"
-            className="welcome-image"
-          />
+          <img src={greenField} alt="Welcome Image" className="welcome-image" />
         </div>
         <div className="welcome-text">
           <h1 className="text-3xl font-bold">WELCOME TO OUR WEBSITE</h1>
@@ -99,11 +98,7 @@ function WelcomePage() {
             </p>
           </div>
           <div className="">
-            <img
-              src="src/assets/water-fall.jpg"
-              alt="About Us"
-              className="w-full"
-            />
+            <img src={waterFall} alt="About Us" className="w-full" />
           </div>
         </div>
       </div>
@@ -179,7 +174,7 @@ function WelcomePage() {
               <div className="mb-4">
                 <h6 className="text-uppercase font-bold mb-4">
                   <img
-                    src="src/assets/logo.jpg"
+                    src={GreenLeaf}
                     alt="Logo"
                     width="20"
                     height="20"

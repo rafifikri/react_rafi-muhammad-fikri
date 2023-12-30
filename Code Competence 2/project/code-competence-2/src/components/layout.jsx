@@ -1,4 +1,4 @@
-import React from "react";
+import GreenLeaf from "../assets/logo.jpg";
 
 export default function Layout({ children }) {
   return (
@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <nav className="flex justify-between p-3 shadow-md">
         <h1 className="flex items-center text-2xl">
           <img
-            src="src/assets/logo.jpg"
+            src={GreenLeaf}
             alt="Logo"
             width="40"
             height="40"
